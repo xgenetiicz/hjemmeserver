@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Lagring – SSD / HDD / M.2</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="container nav">
+    <a href="/index.html" class="brand"><span class="brand-logo"></span><span class="brand-name">Hjemmeservere<span class="brand-dot">.no</span></span></a>
+    <nav class="nav-links">
+      <a href="/linux/index.html">Produkter</a>
+      <a href="/nas/index.html">NAS</a>
+      <a href="/storage/index.html">Lagring</a>
+      <a class="cart-pill" href="/cart.html">🛒 <span id="cartCount">0</span></a>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <h1>Lagring</h1>
+
+    <div class="catalog">
+      <!-- VENSTRE FILTER -->
+      <aside class="sidebar">
+        <div class="group">
+          <h4>Type</h4>
+          <label><input type="checkbox" name="type" value="ssd"> SSD</label>
+          <label><input type="checkbox" name="type" value="hdd"> HDD</label>
+          <label><input type="checkbox" name="type" value="m2"> M.2 NVMe</label>
+        </div>
+        <div class="group">
+          <button id="resetBtn" class="btn">Nullstill</button>
+        </div>
+      </aside>
+
+      <!-- HØYRE LISTE -->
+      <div>
+        <div class="toolbar">
+          <div class="muted"><span id="count">0</span> produkter</div>
+          <div>
+            <label class="muted" for="sort">Sorter:</label>
+            <select id="sort" class="select" style="width:auto">
+              <option value="relevance">Relevans</option>
+              <option value="price-asc">Pris: lav-høy</option>
+              <option value="price-desc">Pris: høy-lav</option>
+              <option value="title">Tittel A–Å</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="list" class="list">
+          <!-- SSD -->
+          <article class="list-item" data-type="ssd" data-price="330" data-id="ssd-kingston-250">
+            <div class="thumb"><img src="/assets/images/ssd250.webp" alt="Kingston SSD 250GB"></div>
+            <div>
+              <h3>Kingston SSD 250GB</h3>
+              <div class="meta">SATA 2.5" • Les 500MB/s • Skriv 450MB/s</div>
+              <div class="meta">Varenr: SSD-250</div>
+            </div>
+            <div class="price">
+              <div class="num">399 kr</div>
+              <div class="actions"><button class="btn primary" data-add="ssd-kingston-250">Legg i handlekurv</button></div>
+            </div>
+          </article>
+
+          <article class="list-item" data-type="ssd" data-price="600" data-id="ssd-kingston-500">
+            <div class="thumb"><img src="/assets/images/ssd250.webp" alt="Kingston SSD 500GB"></div>
+            <div>
+              <h3>Kingston SSD 500GB</h3>
+              <div class="meta">SATA 2.5" • Les 520MB/s • Skriv 500MB/s</div>
+              <div class="meta">Varenr: SSD-500</div>
+            </div>
+            <div class="price">
+              <div class="num">549 kr</div>
+              <div class="actions"><button class="btn primary" data-add="ssd-kingston-500">Legg i handlekurv</button></div>
+            </div>
+          </article>
+
+          <article class="list-item" data-type="ssd" data-price="899" data-id="ssd-kingston-1tb">
+            <div class="thumb"><img src="/assets/images/ssd250.webp" alt="Kingston SSD 1TB"></div>
+            <div>
+              <h3>Kingston SSD 1TB</h3>
+              <div class="meta">SATA 2.5" • Les 520MB/s • Skriv 500MB/s</div>
+              <div class="meta">Varenr: SSD-1TB</div>
+            </div>
+            <div class="price">
+              <div class="num">899 kr</div>
+              <div class="actions"><button class="btn primary" data-add="ssd-kingston-1tb">Legg i handlekurv</button></div>
+            </div>
+          </article>
+
+          <!-- HDD -->
+          <article class="list-item" data-type="hdd" data-price="699" data-id="hdd-2tb">
+            <div class="thumb"><img src="/assets/images/seagate.jpeg" alt="HDD 2TB"></div>
+            <div>
+              <h3>HDD 2TB 3.5"</h3>
+              <div class="meta">5400 RPM • SATA • 64MB cache</div>
+              <div class="meta">Varenr: HDD-2TB</div>
+            </div>
+            <div class="price">
+              <div class="num">699 kr</div>
+              <div class="actions"><button class="btn primary" data-add="hdd-2tb">Legg i handlekurv</button></div>
+            </div>
+          </article>
+
+          <!-- M.2 -->
+          <article class="list-item" data-type="m2" data-price="599" data-id="m2-500">
+            <div class="thumb"><img src="/assets/images/pi5.jpeg" alt="M.2 NVMe 500GB"></div>
+            <div>
+              <h3>M.2 NVMe PI 500GB</h3>
+              <div class="meta">PCIe 3.0 x4 • Les 3000MB/s • Skriv 2000MB/s</div>
+              <div class="meta">Varenr: M2-500</div>
+            </div>
+            <div class="price">
+              <div class="num">599 kr</div>
+              <div class="actions"><button class="btn primary" data-add="m2-500">Legg i handlekurv</button></div>
+            </div>
+          </article>
+
+          <article class="list-item" data-type="m2" data-price="999" data-id="m2-1tb">
+            <div class="thumb"><img src="/assets/images/kingston m.2.jpeg" alt="M.2 NVMe 1TB"></div>
+            <div>
+              <h3>M.2 NVMe 1TB</h3>
+              <div class="meta">PCIe 3.0 x4 • Les 3200MB/s • Skriv 3000MB/s</div>
+              <div class="meta">Varenr: M2-1TB</div>
+            </div>
+            <div class="price">
+              <div class="num">999 kr</div>
+              <div class="actions"><button class="btn primary" data-add="m2-1tb">Legg i handlekurv</button></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container footer-copy">© <span id="year"></span> Hjemmeservere.no</div></footer>
+
+<script src="/assets/app.js"></script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
+const list = $('#list');
+const items = $$('.list-item');
+const countEl = $('#count');
+
+function getFilters() {
+  const types = $$('input[name="type"]:checked').map(i => i.value);
+  return {types};
+}
+
+function applyFilters() {
+  const {types} = getFilters();
+  let visible = 0;
+  items.forEach(it => {
+    const t = it.dataset.type;
+    const okType = types.length ? types.includes(t) : true;
+    it.style.display = okType ? '' : 'none';
+    if (okType) visible++;
+  });
+  countEl.textContent = visible;
+}
+
+function applySort() {
+  const mode = $('#sort').value;
+  const arr = items.slice().filter(it => it.style.display !== 'none');
+  const byPrice = el => parseFloat(el.dataset.price || '0');
+  const byTitle = el => el.querySelector('h3')?.textContent.trim().toLowerCase();
+  if (mode === 'price-asc') arr.sort((a,b)=> byPrice(a)-byPrice(b));
+  else if (mode === 'price-desc') arr.sort((a,b)=> byPrice(b)-byPrice(a));
+  else if (mode === 'title') arr.sort((a,b)=> byTitle(a).localeCompare(byTitle(b)));
+  arr.forEach(el => list.appendChild(el));
+}
+
+$$('input[name="type"]').forEach(inp => inp.addEventListener('change', ()=>{ applyFilters(); applySort(); }));
+$('#sort').addEventListener('change', applySort);
+$('#resetBtn').addEventListener('click', () => {
+  $$('input[name="type"]').forEach(i => i.checked = false);
+  applyFilters(); applySort();
+});
+
+$$('[data-add]').forEach(btn => btn.addEventListener('click', ()=> addToCart(btn.dataset.add)));
+
+applyFilters(); applySort();
+countEl.textContent = items.length;
+</script>
+</body>
+</html>

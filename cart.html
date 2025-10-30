@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Handlekurv</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a href="/index.html" class="logo"><span class="logo-badge"></span><span>Hjemmeservere<span style="opacity:.55">.no</span></span></a>
+    <nav style="display:flex;gap:14px">
+      <a class="tag" href="/linux/index.html">Linux</a>
+      <a class="tag" href="/nas/index.html">NAS</a>
+      <a class="tag" href="/storage/index.html">Lagring</a>
+      <a class="button" href="/cart.html">🛒 <span id="cartCount" class="mono">0</span></a>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <h1>Handlekurv</h1>
+    <div id="cartItems" class="cart"></div>
+    <div class="line"></div>
+    <div class="row"><span class="muted">Delsum</span><strong id="subtotal">0 kr</strong></div>
+    <label class="muted" for="shipping">Frakt</label>
+    <select id="shipping" class="select">
+      <option value="0">Hent selv (0 kr)</option>
+      <option value="99">Standard (99 kr)</option>
+      <option value="199">Ekspress (199 kr)</option>
+    </select>
+    <div class="row"><span class="muted">Totalt</span><strong id="total">0 kr</strong></div>
+    <div class="line"></div>
+    <button id="checkoutBtn" class="btn primary">Gå til betaling</button>
+    <p class="notice">Simulert betaling – ingen data sendes.</p>
+    <div id="orderSuccess" class="notice success" style="display:none">🎉 Takk for bestillingen! (demo)</div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><span class="muted">© <span id="year"></span> Hjemmeservere.no</span></div></footer>
+<script src="/assets/app.js"></script>
+<script>document.getElementById('year').textContent=new Date().getFullYear();renderCart();</script>
+</body>
+</html>

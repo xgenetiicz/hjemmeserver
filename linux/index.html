@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Linux – Kategori</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a href="/index.html" class="logo"><span class="logo-badge"></span><span>Hjemmeservere<span style="opacity:.55">.no</span></span></a>
+    <nav style="display:flex;gap:14px">
+      <a class="tag" href="/linux/index.html">Linux</a>
+      <a class="tag" href="/nas/index.html">NAS</a>
+      <a class="tag" href="/storage/index.html">Lagring</a>
+      <a class="button" href="/cart.html">🛒 <span id="cartCount" class="mono">0</span></a>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <h1>Linux</h1>
+    <div class="grid cols-3">
+      <a class="card product" href="/linux/raspberry-pi/index.html">
+        <div class="img">Raspberry Pi</div>
+        <h3>Raspberry Pi</h3>
+        <p class="muted">3, 4 og 5</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><span class="muted">© <span id="year"></span> Hjemmeservere.no</span></div></footer>
+<script src="/assets/app.js"></script>
+<script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>

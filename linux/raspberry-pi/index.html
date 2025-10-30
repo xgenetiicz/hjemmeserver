@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Raspberry Pi – Liste</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="container nav">
+    <a href="/index.html" class="brand"><span class="brand-logo"></span><span class="brand-name">Hjemmeservere<span class="brand-dot">.no</span></span></a>
+    <nav class="nav-links">
+      <a href="/linux/index.html">Produkter</a>
+      <a href="/nas/index.html">NAS</a>
+      <a href="/storage/index.html">Lagring</a>
+      <a class="cart-pill" href="/cart.html">🛒 <span id="cartCount">0</span></a>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <h1>Raspberry Pi modeller</h1>
+
+    <div class="pi-layout">
+      <!-- SIDEBAR -->
+      <aside class="pi-sidebar">
+        <div class="pi-filter-head">
+          <h4>Filter</h4>
+          <button id="resetFilters" class="btn small">Nullstill</button>
+        </div>
+
+        <div class="pi-filter-group">
+          <h5>Modell</h5>
+          <label><input type="checkbox" class="f-model" value="pi3"> Raspberry Pi 3</label>
+          <label><input type="checkbox" class="f-model" value="pi4"> Raspberry Pi 4</label>
+          <label><input type="checkbox" class="f-model" value="pi5"> Raspberry Pi 5</label>
+        </div>
+
+        <div class="pi-filter-group">
+          <h5>Tilbehør</h5>
+          <label><input type="checkbox" class="f-type" value="case"> Case</label>
+          <label><input type="checkbox" class="f-type" value="charger"> Lader</label>
+        </div>
+
+        <div class="pi-filter-group">
+          <h5>Pris</h5>
+          <select id="sortSelect" class="pi-select">
+            <option value="relevance">Relevans</option>
+            <option value="price-asc">Pris: lav → høy</option>
+            <option value="price-desc">Pris: høy → lav</option>
+          </select>
+        </div>
+      </aside>
+
+      <!-- LISTE -->
+      <main>
+        <div class="pi-toolbar">
+          <input id="searchInput" class="pi-input pi-search" type="search" placeholder="Søk (f.eks. '8GB', 'lader', 'case')">
+          <div class="muted" id="resultCount">0 treff</div>
+        </div>
+
+        <div id="piList" class="pi-list">
+          <!-- PI 3 -->
+          <article class="pi-item" data-model="pi3" data-type="board" data-price="699">
+            <div class="pi-thumb">
+              <img src="/assets/images/pi3.avif" alt="Raspberry Pi 3">
+            </div>
+            <div>
+              <h3 class="pi-title"><a href="/products/pi3.html">Raspberry Pi 3</a></h3>
+              <p class="pi-meta">Quad-core 1.2 GHz • 1GB RAM • Wi-Fi/Bluetooth</p>
+              <div class="pi-rating">★★★★★ <span class="muted">(12)</span></div>
+              <div class="pi-stock">✓ På lager</div>
+            </div>
+            <div class="pi-price">
+              <strong>699,-</strong>
+              <div class="pi-actions">
+                <a class="btn" href="/products/pi3.html">Detaljer</a>
+                <button class="btn primary add" data-id="pi3">Legg i handlekurv</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PI 4 -->
+          <article class="pi-item" data-model="pi4" data-type="board" data-price="999">
+            <div class="pi-thumb">
+              <img src="/assets/images/pi4.jpg" alt="Raspberry Pi 4">
+            </div>
+            <div>
+              <h3 class="pi-title"><a href="/products/pi4.html">Raspberry Pi 4</a></h3>
+              <p class="pi-meta">Quad-core 1.5 GHz • 4GB RAM • USB-C • 2×Micro-HDMI</p>
+              <div class="pi-rating">★★★★☆ <span class="muted">(18)</span></div>
+              <div class="pi-stock">✓ På lager</div>
+            </div>
+            <div class="pi-price">
+              <strong>999,-</strong>
+              <div class="pi-actions">
+                <a class="btn" href="/products/pi4.html">Detaljer</a>
+                <button class="btn primary add" data-id="pi4">Legg i handlekurv</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PI 5 -->
+          <article class="pi-item" data-model="pi5" data-type="board" data-price="1499">
+            <div class="pi-thumb">
+              <img src="/assets/images/pi5.jpeg" alt="Raspberry Pi 5">
+            </div>
+            <div>
+              <h3 class="pi-title"><a href="/products/pi5.html">Raspberry Pi 5</a></h3>
+              <p class="pi-meta">Quad-core 2.4 GHz • 8GB RAM • PCIe • VideoCore 6</p>
+              <div class="pi-rating">★★★★★ <span class="muted">(27)</span></div>
+              <div class="pi-stock">✓ På lager</div>
+            </div>
+            <div class="pi-price">
+              <strong>1 499,-</strong>
+              <div class="pi-actions">
+                <a class="btn" href="/products/pi5.html">Detaljer</a>
+                <button class="btn primary add" data-id="pi5">Legg i handlekurv</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- PI 5 Case -->
+          <article class="pi-item" data-model="pi5" data-type="case" data-price="199">
+            <div class="pi-thumb">
+              <img src="/assets/images/case5.avif" alt="Raspberry Pi 5 Case">
+            </div>
+            <div>
+              <h3 class="pi-title">Raspberry Pi 5 — Offisiell Case (sort/grå)</h3>
+              <p class="pi-meta">Passer Pi 5 • God kjøling • Enkel montering</p>
+              <div class="pi-rating">★★★☆☆ <span class="muted">(5)</span></div>
+              <div class="pi-stock">✓ På lager</div>
+            </div>
+            <div class="pi-price">
+              <strong>199,-</strong>
+              <div class="pi-actions">
+                <button class="btn primary add" data-id="pi5-case">Legg i handlekurv</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- USB-C Lader -->
+          <article class="pi-item" data-model="pi5" data-type="charger" data-price="209">
+            <div class="pi-thumb">
+              <img src="/assets/images/pi5charger.png" alt="Raspberry Pi 5 5A USB-C Lader">
+            </div>
+            <div>
+              <h3 class="pi-title">Raspberry Pi 5 — 5A USB-C Lader</h3>
+              <p class="pi-meta">AC adapter • 5.1V 5A • Sort</p>
+              <div class="pi-rating">★★★★★ <span class="muted">(4)</span></div>
+              <div class="pi-stock">✓ På lager</div>
+            </div>
+            <div class="pi-price">
+              <strong>209,-</strong>
+              <div class="pi-actions">
+                <button class="btn primary add" data-id="pi5-charger">Legg i handlekurv</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </main>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container footer-copy">© <span id="year"></span> Hjemmeservere.no</div></footer>
+
+<script src="/assets/app.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Sørg for at tilbehør også finnes i PRODUCTS (for handlekurv-rendring i cart.html)
+  window.PRODUCTS = window.PRODUCTS || {};
+  Object.assign(window.PRODUCTS, {
+    'pi5-case':    { id:'pi5-case',    title:'Raspberry Pi 5 Case (sort/grå)', cat:'Tilbehør', price:199, specs:['Passer Pi 5'] },
+    'pi5-charger': { id:'pi5-charger', title:'Raspberry Pi 5 5A USB-C Lader',  cat:'Tilbehør', price:209, specs:['5.1V 5A'] }
+  });
+
+  // Filter + sort + søk
+  const $ = s => document.querySelector(s);
+  const $all = s => Array.from(document.querySelectorAll(s));
+  const list = $('#piList');
+  const items = $all('.pi-item');
+
+  function applyFilters(){
+    const models = new Set($all('.f-model:checked').map(x=>x.value));
+    const types  = new Set($all('.f-type:checked').map(x=>x.value));
+    const q = $('#searchInput').value.trim().toLowerCase();
+    const sort = $('#sortSelect').value;
+
+    let visible = [];
+    items.forEach(el=>{
+      const matchModel = models.size ? models.has(el.dataset.model) : true;
+      const matchType  = types.size  ? types.has(el.dataset.type)  : true;
+      const text = el.textContent.toLowerCase();
+      const matchQ = q ? text.includes(q) : true;
+      const show = matchModel && matchType && matchQ;
+      el.style.display = show ? '' : 'none';
+      if(show) visible.push(el);
+    });
+
+    // Sortering
+    let sorted = visible;
+    if(sort==='price-asc' || sort==='price-desc'){
+      sorted = [...visible].sort((a,b)=>{
+        const pa = parseInt(a.dataset.price,10), pb = parseInt(b.dataset.price,10);
+        return sort==='price-asc' ? pa-pb : pb-pa;
+      });
+      sorted.forEach(el=> list.appendChild(el));
+    }
+
+    $('#resultCount').textContent = `${visible.length} treff`;
+  }
+
+  // Events
+  $('#searchInput').addEventListener('input', applyFilters);
+  $('#sortSelect').addEventListener('change', applyFilters);
+  $all('.f-model, .f-type').forEach(cb => cb.addEventListener('change', applyFilters));
+  $('#resetFilters').addEventListener('click', ()=>{
+    $all('.f-model, .f-type').forEach(cb => cb.checked=false);
+    $('#searchInput').value=''; $('#sortSelect').value='relevance'; applyFilters();
+  });
+
+  // Add-to-cart på liste
+  $all('.add').forEach(btn => btn.addEventListener('click', ()=> addToCart(btn.dataset.id)));
+
+  // Init
+  applyFilters();
+</script>
+</body>
+</html>
