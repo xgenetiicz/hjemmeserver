@@ -11,11 +11,8 @@ window.PRODUCTS = {
   'pi4': { id:'pi4', title:'Raspberry Pi 4', cat:'Linux', price:999,
     specs:['Quad-core 1.5 GHz','4GB RAM','USB-C, 2×Micro-HDMI'] },
 
-  'pi5-8gb': { id:'pi5-8gb', title:'Raspberry Pi 5 (8GB)', cat:'Linux', price:1499,
+  'pi5': { id:'pi5', title:'Raspberry Pi 5 (8GB)', cat:'Linux', price:1499,
     specs:['Quad-core 2.4 GHz','8GB RAM','PCIe/VideoCore6'] },
-
-  'pi5-16gb': { id:'pi5-16gb', title:'Raspberry Pi 5 (16GB)', cat:'Linux', price:2029,
-    specs:['Quad-core 2.4 GHz','16GB RAM','PCIe/VideoCore6'] },
 
   'case-pi4': { id:'case-pi4', title:'Raspberry Pi 4 Official Case', cat:'Linux', price:199,
     specs:['Offisiell case','Pi 4 kompatibel','Sort/grå'] },
