@@ -23,7 +23,7 @@ Hjemmeserver
 - nas
 - products
 - storage
-cart.html
-<b>index.html (Live Server på denne!)</b>
-LICENSE
-README.md
+- cart.html
+- <b>index.html (Live Server på denne!)</b>
+- LICENSE
+- README.md
